@@ -102,20 +102,22 @@
                 <td align="right">93</td>
                 <td align="middle"></td>
               </tr>
+              <tr class="table-primary">
+                <td>
+                  <span class="badge badge-pill badge-primary">PRIMARY</span>
+                </td>
+                <td>Frederiko Lopez</td>
+                <td>fr.lopez@webmail.sp</td>
+                <td>Barcelona</td>
+                <td align="right">16</td>
+                <td align="middle"></td>
+              </tr>
               <tr>
                 <td></td>
                 <td>Nancy Bo</td>
                 <td>nancy@boonweb.com</td>
                 <td>Washington</td>
                 <td align="right">280</td>
-                <td align="middle"></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Frederiko Lopez</td>
-                <td>fr.lopez@webmail.sp</td>
-                <td>Barcelona</td>
-                <td align="right">16</td>
                 <td align="middle"></td>
               </tr>
               <tr class="table-danger">
@@ -132,7 +134,7 @@
               </tr>
               <tr class="table-success">
                 <td>
-                  <span class="badge badge-pill badge-primary">SUCCESS</span>
+                  <span class="badge badge-pill badge-success">SUCCESS</span>
                 </td>
                 <td>Lendley Wintz</td>
                 <td>9938198146@mailster.io</td>

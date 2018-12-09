@@ -41,6 +41,7 @@ export default {
     left: 0;
     transition: all 0.2s ease;
     opacity: 1;
+    box-shadow: $sidebar-box-shadow;
 
     .vuestic-scrollbar {
       height: 100%;

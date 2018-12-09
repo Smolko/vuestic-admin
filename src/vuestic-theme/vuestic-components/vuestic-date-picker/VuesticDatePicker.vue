@@ -52,7 +52,7 @@ export default {
 <style lang="scss">
   @import "~flatpickr/dist/flatpickr.css";
 
-  $datepickerActive: $vue-green;
+  $datepickerActive: $brand-primary;
   $datepickerBackground: #333333;
   $datepickerText: $white;
 

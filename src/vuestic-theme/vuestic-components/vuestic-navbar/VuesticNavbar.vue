@@ -31,7 +31,7 @@ export default {
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 1;
+      z-index: 1001;
     }
 
     .header-elem-wrapper {
@@ -50,6 +50,7 @@ export default {
     padding-left: $nav-padding-left;
     padding-right: $nav-padding-right;
     background-color: $top-nav-bg;
+    box-shadow: $sidebar-box-shadow;
 
     .vuestic-navbar__logo {
       display: flex;
