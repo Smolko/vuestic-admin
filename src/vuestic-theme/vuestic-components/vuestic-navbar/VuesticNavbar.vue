@@ -1,9 +1,11 @@
 <template>
   <nav class="vuestic-navbar navbar navbar-toggleable-md">
     <div class="vuestic-navbar__logo navbar-brand-container d-flex align-items-center justify-content-start">
-      <router-link class="navbar-brand" to="/dashboard">
-        <slot name="logo"/>
-      </router-link>
+      <div class="navbar-brand">
+        <router-link to="/dashboard">
+          <slot name="logo"/>
+        </router-link>
+      </div>
     </div>
     <div class="row vuestic-navbar__content">
       <div class="header-elem-wrapper menu-icon-container justify-content-lg-start col">
@@ -62,11 +64,12 @@ export default {
       @include media-breakpoint-down(md) {
 
         .vuestic-navbar__logo {
-          width: $nav-mobile-brand-width;
           top: $nav-mobile-brand-top;
-          left: $nav-mobile-brand-left;
+          left: 50%;
+          transform: translate(-50%);
           height: auto;
           .navbar-brand {
+            margin-right: 0;
             height: $font-size-smaller;
             padding: 0;
             font-size: $font-size-smaller;
@@ -156,11 +159,12 @@ export default {
       padding: $nav-mobile-pt $nav-mobile-padding-h $nav-mobile-pb $nav-mobile-padding-h;
 
       .vuestic-navbar__logo {
-        width: $nav-mobile-brand-width;
         top: $nav-mobile-brand-top;
         left: $nav-mobile-brand-left;
+        transform: translate(-50%);
         height: auto;
         .navbar-brand {
+          margin-right: 0;
           height: $font-size-smaller;
           padding: 0;
           font-size: $font-size-smaller;

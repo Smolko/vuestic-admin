@@ -1,5 +1,5 @@
 <template>
-  <div class="layout"
+  <div class="layout layout-fixed"
        v-resize
        :class="classObject"
   >
@@ -40,19 +40,6 @@ export default {
 
 <style lang="scss">
   .layout {
-    &-fixed {
-      .content-wrap {
-        padding-right: $layout-padding-right;
-        padding-top: $sidebar-top;
-
-        @include media-breakpoint-down(md) {
-          padding: $content-mobile-wrap-fixed-layout;
-          margin-left: 0;
-
-        }
-      }
-    }
-
     .content-wrap {
       margin-left: $content-wrap-ml;
       transition: margin-left 0.3s ease;
@@ -70,6 +57,17 @@ export default {
         .sidebar-hidden & {
           margin-left: 0;
           padding-top: $content-mobile-wrap-sb-top;
+        }
+      }
+    }
+    &-fixed {
+      .content-wrap {
+        padding-right: $layout-padding-right;
+        padding-top: calc(#{$sidebar-top} + #{$layout-padding});
+
+        @include media-breakpoint-down(md) {
+          padding: $content-mobile-wrap-fixed-layout;
+          margin-left: 0;
         }
       }
     }

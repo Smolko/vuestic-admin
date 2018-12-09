@@ -15,15 +15,6 @@
         {{ $t(item.displayName) }}
       </router-link>
     </div>
-    <div class="vuestic-breadcrumbs__help-section">
-      <a
-        target="_blank"
-        :href="currentRoute"
-        class="btn btn-micro btn-info"
-      >
-        <span class="vuestic-icon vuestic-icon-files"></span>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -71,10 +62,10 @@ export default {
 
 <style lang='scss'>
 .vuestic-breadcrumbs {
-  min-height: $breadcrumbs-height;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px 0;
   .vuestic-breadcrumbs__nav-section-item {
     color: $text-gray;
     &:hover {

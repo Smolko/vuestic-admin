@@ -61,7 +61,7 @@ $body-bg: $light-gray;
 $top-nav-bg: $darkest-gray;
 $body-color: $vue-darkest-blue !default;
 $layout-padding: 24px;
-$layout-padding-right: 44px;
+$layout-padding-right: 24px;
 
 $top-nav-height: 72px;
 $nav-padding-left: $layout-padding;
@@ -70,10 +70,10 @@ $navbar-brand-container-left: 75px;
 
 $sidebar-bg: $darkest-gray;
 $sidebar-width: 225px;
-$sidebar-top: calc(#{$top-nav-height} + #{$layout-padding});
+$sidebar-top: calc(#{$top-nav-height});
 $sidebar-left: $layout-padding;
 
-$content-wrap-ml: calc(#{$sidebar-left} + #{$sidebar-width} + 35px);
+$content-wrap-ml: calc(#{$sidebar-left} + #{$sidebar-width});
 $content-wrap-pr: $layout-padding-right;
 $content-wrap-pt: $layout-padding;
 $content-wrap-pb: $layout-padding;
@@ -100,11 +100,11 @@ $sidebar-mobile-z-index: 1000;
 
 $content-mobile-wrap-pl: 1rem;
 $content-mobile-wrap-pr: 1rem;
-$content-mobile-wrap-pt: 2rem;
+$content-mobile-wrap-pt: 1rem;
 $content-mobile-wrap-pt-fixed-layout: 7rem;
 $content-mobile-wrap-pb: $layout-padding;
 $content-mobile-wrap: $content-mobile-wrap-pt $content-mobile-wrap-pr $content-mobile-wrap-pb $content-mobile-wrap-pl;
-$content-mobile-wrap-fixed-layout: $content-mobile-wrap-pt-fixed-layout $content-mobile-wrap-pr $content-mobile-wrap-pb $content-mobile-wrap-pl;
+$content-mobile-wrap-fixed-layout: calc(#{$top-mobile-nav-height} + #{$content-mobile-wrap-pt}) $content-mobile-wrap-pr $content-mobile-wrap-pb $content-mobile-wrap-pl;
 $content-mobile-wrap-sb-top: calc(#{$top-nav-height} + #{$layout-padding+20}) - 20 px;
 
 $nav-mobile-padding-h: .875rem;
@@ -112,7 +112,7 @@ $nav-mobile-pt: 1.75rem;
 $nav-mobile-pb: 0.5rem;
 $nav-mobile-brand-width: 4rem;
 $nav-mobile-brand-top: .875rem;
-$nav-mobile-brand-left: calc(50% - #{$nav-mobile-brand-width});
+$nav-mobile-brand-left: 50%;
 
 $droppdown-mobile-mp: 1.9375rem;
 $dropdown-mobile-show-b: 2rem;
@@ -171,7 +171,7 @@ $sidebar-submenu-link-pl: 74px;
 $sidebar-link-active-bg: $almost-black;
 $sidebar-arrow-right: 16px;
 $sidebar-menu-item-icon-size: 19px;
-$sidebar-viewport-height: calc(100vh - #{$top-nav-height} - #{$content-wrap-pt} - #{$content-wrap-pb});
+$sidebar-viewport-height: calc(100vh - #{$top-nav-height});
 
 $sidebar-hidden-top: -150px;
 $sidebar-hidden-top-mobile: $sidebar-mobile-top;

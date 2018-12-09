@@ -33,11 +33,12 @@ export default {
       z-index: $sidebar-mobile-z-index;
     }
 
+    background-color: $sidebar-bg;
     height: $sidebar-viewport-height;
-    position: absolute;
+    position: fixed;
     width: $sidebar-width;
     top: $sidebar-top;
-    left: $sidebar-left;
+    left: 0;
     transition: all 0.2s ease;
     opacity: 1;
 
@@ -53,10 +54,6 @@ export default {
           display: block;
           padding-left: 0;
         }
-      }
-
-      .scrollbar-wrapper {
-        box-shadow: $sidebar-box-shadow;
       }
 
       .scrollbar-content {
