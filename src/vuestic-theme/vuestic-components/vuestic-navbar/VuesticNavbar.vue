@@ -51,7 +51,7 @@ export default {
   padding-left: $nav-padding-left;
   padding-right: $nav-padding-right;
   background-color: $top-nav-bg;
-  box-shadow: $sidebar-box-shadow;
+  box-shadow: $navbar-box-shadow;
 
   .vuestic-navbar__logo {
     display: flex;

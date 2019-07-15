@@ -1,5 +1,5 @@
 <template>
-  <div class="vuestic-layout"
+  <div class="vuestic-layout vuestic-layout-fixed"
        v-resize
        :class="classObject"
   >
@@ -41,7 +41,7 @@ export default {
   .content-wrap {
     margin-left: $content-wrap-ml;
     transition: margin-left 0.3s ease;
-    padding: $layout-padding $layout-padding-right $content-wrap-pb 0;
+    padding: $layout-padding $layout-padding $content-wrap-pb 0;
     .pre-loader {
       position: absolute;
       left: $vuestic-preloader-left;
@@ -57,8 +57,16 @@ export default {
     }
   }
   &-fixed {
+    .vuestic-navbar {
+      position: fixed;
+      width: 100%;
+      z-index: 1001;
+    }
+    .vuestic-sidebar {
+      position: fixed;
+      z-index: 1001;
+    }
     .content-wrap {
-      padding-right: $layout-padding-right;
       padding-top: $sidebar-top;
       @include media-breakpoint-down(md) {
         padding: $content-mobile-wrap-fixed-layout;
