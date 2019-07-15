@@ -6,8 +6,9 @@
            @touchstart="startDrag"
            @touchmove="onDrag"
            @touchend="stopDrag"
-           @transitionend="onContentResize">
-        <slot></slot>
+           @transitionend="onContentResize"
+      >
+        <slot/>
       </div>
       <div class="track" ref="track">
         <div class="thumb" ref="thumb"></div>
@@ -24,8 +25,8 @@ export default {
   name: 'vuestic-scrollbar',
   props: {
     speed: {
-      default: 20
-    }
+      default: 20,
+    },
   },
   methods: {
     calcSize () {
@@ -120,7 +121,7 @@ export default {
 
       this.content.style.marginTop = nextMT + 'px'
       this.calcThumb()
-    }
+    },
   },
   mounted () {
     this.track = this.$refs.track
@@ -149,44 +150,45 @@ export default {
       isDown: false,
       isUp: true,
       prevTouch: {},
-      isDragging: false
+      isDragging: false,
     }
-  }
+  },
 }
 
 </script>
 
 <style lang="scss">
-  .vuestic-scrollbar {
-    background: transparent;
-    transition: all .3s linear;
+.vuestic-scrollbar {
+  background: transparent;
+  transition: all .3s linear;
+  position: relative;
+  z-index: 1001;
+  .scrollbar-wrapper {
     position: relative;
-    .scrollbar-wrapper {
-      position: relative;
-      overflow: hidden;
-      max-height: 100%;
-      .track {
-        width: 5px;
+    overflow: hidden;
+    max-height: 100%;
+    .track {
+      width: 5px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      .thumb {
+        transition: height .3s linear, opacity .6s linear;
         position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        .thumb {
-          transition: height .3s linear, opacity .6s linear;
-          position: absolute;
-          width: 100%;
-          background-color: $brand-primary;
-          opacity: 0;
-          &.active {
-            opacity: .3;
-          }
+        width: 100%;
+        background-color: $brand-primary;
+        opacity: 0;
+        &.active {
+          opacity: .3;
         }
       }
     }
-    &:hover {
-      .thumb.active {
-        opacity: 1 !important;
-      }
+  }
+  &:hover {
+    .thumb.active {
+      opacity: 1 !important;
     }
   }
+}
 </style>

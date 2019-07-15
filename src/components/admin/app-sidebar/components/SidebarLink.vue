@@ -15,12 +15,12 @@ export default {
   props: {
     to: {
       type: Object,
-      required: true
+      required: true,
     },
     target: {
       type: String,
-      default: '_self'
-    }
+      default: '_self',
+    },
   },
   watch: {
     $route (route) {
@@ -35,7 +35,7 @@ export default {
         }
         linkGroup.expanded = true
       })
-    }
+    },
   },
 }
 </script>

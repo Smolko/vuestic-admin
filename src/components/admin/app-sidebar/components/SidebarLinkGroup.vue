@@ -9,7 +9,8 @@
       <i class="expand-icon fa fa-angle-down"></i>
     </a>
     <expanding>
-      <ul class="sidebar-submenu in" v-show="this.expanded" ref="linkGroupWrapper">
+      <ul class="sidebar-submenu in" v-show="this.expanded"
+          ref="linkGroupWrapper">
         <slot></slot>
       </ul>
     </expanding>
@@ -24,11 +25,11 @@ export default {
   name: 'sidebar-link-group',
   components: {
     SidebarLink,
-    Expanding
+    Expanding,
   },
   data () {
     return {
-      expanded: this.expanded
+      expanded: this.expanded,
     }
   },
   mounted () {
@@ -40,20 +41,20 @@ export default {
   watch: {
     $route (route) {
       this.expanded = false
-    }
+    },
   },
   methods: {
     toggleMenuItem () {
       this.expanded = !this.expanded
-    }
+    },
   },
   computed: {
     classObject: function () {
       return {
-        'expanded': this.expanded
+        'expanded': this.expanded,
       }
     },
-  }
+  },
 }
 
 </script>

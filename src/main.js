@@ -1,6 +1,6 @@
 // Polyfills
-// import 'es6-promise/auto'
-// import 'babel-polyfill'
+import 'es6-promise/auto'
+import 'babel-polyfill'
 
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
@@ -34,5 +34,5 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
 })

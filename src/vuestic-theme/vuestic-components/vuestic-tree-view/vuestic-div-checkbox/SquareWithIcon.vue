@@ -12,21 +12,21 @@ export default {
   props: {
     iconClass: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 
 <style lang="scss">
-  .square-with-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.square-with-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 1.375rem;
-    width: 1.375rem;
-    color: $white;
-    background-color: $brand-primary;
-  }
+  height: 1.375rem;
+  width: 1.375rem;
+  color: $white;
+  background-color: $brand-primary;
+}
 </style>
